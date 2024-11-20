@@ -53,6 +53,6 @@ class MyEmailView @JvmOverloads constructor(
     }
 
     override fun onTouch(v: View?, event: MotionEvent?): Boolean {
-        TODO("Not yet implemented")
+        return false
     }
 }

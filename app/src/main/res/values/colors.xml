@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="background">#E9EED9</color>
+    <color name="Welcome_color">#54473F</color>
+    <color name="register_link_color">#0000EE</color>
+
 </resources>
