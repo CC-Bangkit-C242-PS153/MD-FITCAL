@@ -4,30 +4,26 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.drawable.Drawable
 import android.text.Editable
-import android.text.Highlights
 import android.text.TextWatcher
 import android.util.AttributeSet
 import android.util.Patterns
 import android.view.MotionEvent
 import android.view.View
 import androidx.appcompat.widget.AppCompatEditText
+import com.example.capstoneproject.R
 
-class MyEmailView @JvmOverloads constructor(
+class MyEditText @JvmOverloads constructor (
     context: Context,
     attrs: AttributeSet? = null
-) :AppCompatEditText(context,attrs), View.OnTouchListener {
+): AppCompatEditText(context,attrs), View.OnTouchListener {
     init {
         setOnTouchListener(this)
-        addTextChangedListener(object :TextWatcher{
+        addTextChangedListener(object : TextWatcher {
 
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (s != null && !Patterns.EMAIL_ADDRESS.matcher(s).matches()){
-                    setError("Invalid email format",null)
-                }else{
-                    error = null
-                }
+
             }
 
             override fun afterTextChanged(s: Editable?) {}
@@ -36,7 +32,6 @@ class MyEmailView @JvmOverloads constructor(
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        hint = "Enter your email"
         textAlignment = View.TEXT_ALIGNMENT_VIEW_START
     }
 
