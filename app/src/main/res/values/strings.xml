@@ -2,7 +2,8 @@
     <string name="app_name">CapstoneProject</string>
     <string name="password">Password</string>
     <string name="email">Email</string>
-    <string name="login">LOGIN\n</string>
+    <string name="login">LOGIN</string>
+    <string name="btn_register">REGISTER</string>
     <string name="welcome_to_fitcal">WELCOME TO \n FITCAL</string>
     <string name="opening_text">your health depends on you and we are here to help you</string>
     <string name="question_login">Or login with</string>
@@ -10,4 +11,13 @@
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="register"> register</string>
     <string name="tv_help_Center">Need help? Visit our help center</string>
+    <string name="register_title">REGISTER</string>
+    <string name="tv_Opening">Enter your details to register</string>
+    <string name="name_register">Name</string>
+    <string name="edt_date_of_birth">Date Of Birth</string>
+    <string name="edt_gender">Gender</string>
+    <string name="edt_email">Email\n</string>
+    <string name="edt_number_phone">Number Phone</string>
+    <string name="text_checkbox">I agree with the terms and conditions</string>
+    <string name="tv_hel_register">Need help? Visit our <b>Help center</b></string>
 </resources>
