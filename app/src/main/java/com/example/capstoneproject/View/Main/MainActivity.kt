@@ -21,12 +21,5 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val delay: Long = 5000
-        Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this@MainActivity, LoginActivity::class.java)
-            startActivity(intent)
-            finish()
-        }, delay)
-
     }
 }

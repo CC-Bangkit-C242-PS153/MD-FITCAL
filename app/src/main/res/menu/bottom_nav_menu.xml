@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_fitguide"
+        android:icon="@drawable/ic_fitguide"
+        android:title="Fit Guide"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/nav_nutrition"
+        android:icon="@drawable/ic_nutrition"
+        android:title="Nutrition"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/nav_sleepcycle"
+        android:icon="@drawable/ic_sleepcycle"
+        android:title="Sleep Cycle"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="Profile"
+        app:showAsAction="ifRoom" />
+</menu>

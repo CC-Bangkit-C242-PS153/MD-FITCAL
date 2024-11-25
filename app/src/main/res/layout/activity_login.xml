@@ -9,15 +9,15 @@
 
     <ImageView
         android:id="@+id/img_logo"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_width="303dp"
+        android:layout_height="243dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="20dp"
+        android:src="@drawable/fitcal_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/fitcal_logo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/emailTextView"
@@ -90,16 +90,18 @@
                 tools:ignore="SpeakableTextPresentCheck"/>
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="20dp"
         android:backgroundTint="@color/cardview_dark_background"
         android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PasswordTextInput"
         tools:alpha="100" />
@@ -114,14 +116,14 @@
         app:layout_constraintTop_toBottomOf="@id/loginButton"
         />
 
-<ImageView
-    android:id="@+id/google_logo"
-    android:layout_width="70dp"
-    android:layout_height="40dp"
-    android:src="@drawable/google"
-    app:layout_constraintTop_toBottomOf="@id/tv_or_login"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"/>
+    <ImageView
+        android:id="@+id/google_logo"
+        android:layout_width="72dp"
+        android:layout_height="34dp"
+        android:src="@drawable/google"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_or_login" />
 
     <LinearLayout
         android:id="@+id/linear"
@@ -148,13 +150,15 @@
             android:textColor="@color/register_link_color"
             android:text="@string/register" />
     </LinearLayout>
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/tv_help_Center"
-    android:layout_marginTop="20dp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/linear"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/tv_help_Center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

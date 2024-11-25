@@ -12,21 +12,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CapstoneProject"
         tools:targetApi="31">
+
         <activity
-            android:name=".View.Register.RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".View.Login.LoginActivity"
-            android:exported="true" />
-        <activity
-            android:name=".View.Main.MainActivity"
+            android:name=".View.Welcome.WelcomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".View.Login.LoginActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".View.Register.RegisterActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".View.Main.MainActivity"
+            android:exported="true" />
+
     </application>
 
 </manifest>

@@ -5,5 +5,12 @@
     <color name="background">#E9EED9</color>
     <color name="Welcome_color">#54473F</color>
     <color name="register_link_color">#0000EE</color>
+    <color name="button_color">#9A7E6F</color>
+    <color name="hint_text_color">#CCCCCC</color>
+    <color name="nav_background">#9A7E6F</color>
+
+
+    <color name="selected_color">#FFFFFF</color> <!-- Warna saat item dipilih -->
+    <color name="unselected_color">#0B0B0B</color> <!-- Warna saat item tidak dipilih -->
 
 </resources>
