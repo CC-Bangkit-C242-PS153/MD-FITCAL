@@ -4,9 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.capstoneproject.R
+
+import com.example.capstoneproject.View.BottomNavigation
 import com.example.capstoneproject.View.Register.RegisterActivity
 import com.example.capstoneproject.databinding.ActivityLoginBinding
 
@@ -20,6 +19,11 @@ class LoginActivity : AppCompatActivity() {
 
         binding.tvRegister.setOnClickListener{
             val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.loginButton.setOnClickListener{
+            val intent = Intent(this@LoginActivity, BottomNavigation::class.java)
             startActivity(intent)
         }
     }

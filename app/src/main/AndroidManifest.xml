@@ -13,6 +13,18 @@
         android:theme="@style/Theme.CapstoneProject"
         tools:targetApi="31">
         <activity
+            android:name=".View.BottomNavigation"
+            android:exported="false"
+            android:label="@string/title_activity_bottom_navigation" />
+        <activity
+            android:name=".View.ButtomNavigation"
+            android:exported="false"
+            android:label="@string/title_activity_buttom_navigation" />
+        <activity
+            android:name=".View.ButtomNavigationView"
+            android:exported="false"
+            android:label="@string/title_activity_buttom_navigation_view" />
+        <activity
             android:name=".View.Register.RegisterActivity"
             android:exported="false" />
         <activity
