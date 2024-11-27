@@ -20,4 +20,10 @@
     <string name="edt_number_phone">Number Phone</string>
     <string name="text_checkbox">I agree with the terms and conditions</string>
     <string name="tv_hel_register">Need help? Visit our <b>Help center</b></string>
+    <string name="title_activity_buttom_navigation_view">ButtomNavigationView</string>
+    <string name="title_physical">Fitguide</string>
+    <string name="title_calories">Nutrition</string>
+    <string name="title_sleepcycle">SleepCycle</string>
+    <string name="title_activity_buttom_navigation">ButtomNavigation</string>
+    <string name="title_activity_bottom_navigation">BottomNavigation</string>
 </resources>
