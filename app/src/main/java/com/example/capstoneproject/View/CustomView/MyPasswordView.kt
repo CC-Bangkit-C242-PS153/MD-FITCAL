@@ -42,7 +42,7 @@ class MyPasswordView @JvmOverloads constructor(
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        hint = "Masukkan password Anda"
+        hint = "Enter Your Password"
         textAlignment = View.TEXT_ALIGNMENT_TEXT_START
     }
 
