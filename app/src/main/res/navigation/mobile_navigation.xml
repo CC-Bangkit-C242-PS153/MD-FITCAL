@@ -22,4 +22,9 @@
         android:name="com.example.capstoneproject.View.ui.sleepcycle.SleepCycleFragment"
         android:label="@string/title_sleepcycle"
         tools:layout="@layout/fragment_sleepcycle" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.capstoneproject.View.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

@@ -5,5 +5,7 @@
     <color name="background">#E9EED9</color>
     <color name="Welcome_color">#54473F</color>
     <color name="register_link_color">#0000EE</color>
+    <color name="log_out">#b23b3b</color>
+    <color name="save">#4CAF50</color>
 
 </resources>

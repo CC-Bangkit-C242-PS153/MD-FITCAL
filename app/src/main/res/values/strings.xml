@@ -26,4 +26,9 @@
     <string name="title_sleepcycle">SleepCycle</string>
     <string name="title_activity_buttom_navigation">ButtomNavigation</string>
     <string name="title_activity_bottom_navigation">BottomNavigation</string>
+    <string name="title_profile">Profile</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="log_out">Log out</string>
 </resources>

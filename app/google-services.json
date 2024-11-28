@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "639533720564",
+    "project_id": "fitcal-d5b20",
+    "storage_bucket": "fitcal-d5b20.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:639533720564:android:d146264a3818272da54fa1",
+        "android_client_info": {
+          "package_name": "com.example.capstoneproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "639533720564-b83t30fit0os51cuqrdgkrmumbj0crcj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.capstoneproject",
+            "certificate_hash": "6849adf089923b88c38c0751a1d868bde01df73d"
+          }
+        },
+        {
+          "client_id": "639533720564-4k9sar3109d5l19d2ifj9uddlec2mge9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYAxV5UxjRLmBlriQipqzIcTccY1G1SFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "639533720564-4k9sar3109d5l19d2ifj9uddlec2mge9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

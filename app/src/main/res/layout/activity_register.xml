@@ -137,7 +137,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edt_number_phone"
+            android:id="@+id/passwordTextInput"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="59dp"
@@ -147,12 +147,11 @@
             android:alpha="1"
             tools:alpha="100">
 
-            <com.example.capstoneproject.View.CustomView.MyEditText
+            <com.example.capstoneproject.View.CustomView.MyPasswordView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:alpha="1"
                 android:ems="10"
-                android:hint="@string/edt_number_phone"
                 android:inputType="textEmailAddress"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
@@ -170,7 +169,7 @@
             android:padding="8dp"
             android:text="@string/text_checkbox" />
         <Button
-            android:id="@+id/loginButton"
+            android:id="@+id/signupButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
