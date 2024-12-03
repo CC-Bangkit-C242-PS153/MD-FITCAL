@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
+import android.util.Log
 import androidx.core.content.FileProvider
 import com.example.capstoneproject.BuildConfig
 import okhttp3.MediaType
@@ -48,30 +49,34 @@ private fun getImageUriForPreQ(context: Context): Uri {
         imageFile
     )
 }
-fun uriToMultipart(context: Context, uri: Uri, fileName: String): MultipartBody.Part? {
-    val file = getFileFromUri(context, uri)
-    if (file != null) {
-        val requestBody = RequestBody.create("image/*".toMediaTypeOrNull(), file)
-        return MultipartBody.Part.createFormData("photo", fileName, requestBody)
-    }
-    return null
-}
+//fun uriToMultipart(context: Context, uri: Uri, fileName: String): MultipartBody.Part? {
+//    val file = getFileFromUri(context, uri)
+//    if (file != null) {
+//        Log.d("erorrnya disini", "File path: ${file.absolutePath}")
+//        val requestBody = RequestBody.create("image/jpeg".toMediaTypeOrNull(), file)
+//        return MultipartBody.Part.createFormData("photo", fileName, requestBody)
+//    } else {
+//        Log.e("disini", "Failed to get file from URI")
+//    }
+//    return null
+//}
 
-// Fungsi untuk mendapatkan file dari Uri
-fun getFileFromUri(context: Context, uri: Uri): File? {
-    var file: File? = null
-    try {
-        // Mendapatkan InputStream untuk Uri
-        val inputStream = context.contentResolver.openInputStream(uri)
-        if (inputStream != null) {
-            // Menyimpan InputStream ke file sementara
-            val tempFile = File(context.cacheDir, "temp_image.jpg")
-            val outputStream = tempFile.outputStream()
-            inputStream.copyTo(outputStream)
-            file = tempFile
-        }
-    } catch (e: IOException) {
-        e.printStackTrace()
-    }
-    return file
-}
+//// Fungsi untuk mendapatkan file dari Uri
+//fun getFileFromUri(context: Context, uri: Uri): File? {
+//    var file: File? = null
+//    try {
+//        // Mendapatkan InputStream untuk Uri
+//        val inputStream = context.contentResolver.openInputStream(uri)
+//        if (inputStream != null) {
+//            // Menyimpan InputStream ke file sementara
+//            val tempFile = File(context.cacheDir, "temp_image.jpg")
+//            val outputStream = tempFile.outputStream()
+//            inputStream.copyTo(outputStream)
+//            file = tempFile
+//            Log.d("diFileFromUri", "Temp file created at: ${tempFile.absolutePath}")
+//        }
+//    } catch (e: IOException) {
+//        Log.e("diFileFromUri", "Error while getting file from URI: ${e.message}")
+//    }
+//    return file
+//}

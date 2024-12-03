@@ -15,14 +15,7 @@ import com.example.capstoneproject.View.ui.sleepcycle.SleepCycleFragment.Compani
 import com.example.capstoneproject.data.remote.ViewModelFactory
 import com.example.capstoneproject.data.remote.retrofit.ApiConfig
 import com.example.capstoneproject.databinding.FragmentCaloriesBinding
-import id.zelory.compressor.Compressor
-import id.zelory.compressor.constraint.quality
-import id.zelory.compressor.constraint.resolution
-import id.zelory.compressor.constraint.size
 import kotlinx.coroutines.launch
-import okhttp3.MediaType.Companion.toMediaTypeOrNull
-import okhttp3.MultipartBody
-import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.File
 
 class CaloriesFragment : Fragment() {
@@ -58,17 +51,19 @@ class CaloriesFragment : Fragment() {
             val carbohydrate = binding.edtCarbohydrate.text.toString()
             val fiber = binding.edtFiber.text.toString()
             val sugar = binding.edtSugar.text.toString()
-            val image = currentImageUri
+            val image = currentImageUri!!
 
             if (water.isNotEmpty() && protein.isNotEmpty() && lipid.isNotEmpty() &&
                 ash.isNotEmpty() && carbohydrate.isNotEmpty() &&
                 fiber.isNotEmpty() && sugar.isNotEmpty() && image != null
             ) {
-                val photoPart = uriToMultipart(requireContext(), image, "photo_${timeStamp}.jpg")
+//                val photoPart = uriToMultipart(requireContext(), image, "photo_${timeStamp}.jpg")
+                val photoPart = uriToFilePath(currentImageUri!!)
                 if (photoPart != null) {
+                    val file = File(photoPart)
                     lifecycleScope.launch {
                         observePrediction(
-                            photoPart,
+                            file,
                             water.toDouble(),
                             protein.toDouble(),
                             lipid.toDouble(),
@@ -86,7 +81,6 @@ class CaloriesFragment : Fragment() {
             }
         }
 
-
         // Handle image selection or camera start
         binding.edtImage.setOnClickListener {
             startCamera()
@@ -95,10 +89,8 @@ class CaloriesFragment : Fragment() {
         return root
     }
 
-
-
     private fun observePrediction(
-        photo: MultipartBody.Part,
+        photo: File,
         water: Number,
         protein: Number,
         lipid: Number,
@@ -120,7 +112,6 @@ class CaloriesFragment : Fragment() {
             if (response != null) {
                 Log.d(TAG, "Response: $response")
                 val result = response.result
-
             } else {
                 Log.e(TAG, "Response is null")
             }
@@ -130,9 +121,10 @@ class CaloriesFragment : Fragment() {
     private fun startCamera() {
         currentImageUri = getImageUri(requireContext())
         if (currentImageUri != null) {
+            Log.d(TAG, "Camera URI: $currentImageUri")
             launcherIntentCamera.launch(currentImageUri)
         } else {
-            Log.e("Camera", "Failed to create image URI")
+            Log.e(TAG, "Failed to create image URI")
         }
     }
 
@@ -143,10 +135,22 @@ class CaloriesFragment : Fragment() {
             showImage()
         } else {
             currentImageUri = null
+            Log.e(TAG, "Camera capture failed")
         }
     }
 
-    private fun uriToFilePath(uri: Uri): String? {
+    private fun showImage() {
+        currentImageUri?.let {
+            Log.d(TAG, "Show image URI: $it")
+            binding.edtImage.setImageURI(it)
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+    fun uriToFilePath(uri: Uri): String? {
         val cursor = requireContext().contentResolver.query(uri, null, null, null, null)
         cursor?.use {
             val columnIndex = it.getColumnIndex(MediaStore.Images.Media.DATA)
@@ -157,18 +161,154 @@ class CaloriesFragment : Fragment() {
         }
         return null
     }
-
-    private fun showImage() {
-        currentImageUri?.let {
-            Log.d("Image URI", "showImage: $it")
-            binding.edtImage.setImageURI(it)
-        }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 }
 
 
+//class CaloriesFragment : Fragment() {
+//
+//    private var _binding: FragmentCaloriesBinding? = null
+//    private val binding get() = _binding!!
+//    private lateinit var caloriesViewModel: CaloriesViewModel
+//    private var currentImageUri: Uri? = null
+//
+//    override fun onCreateView(
+//        inflater: LayoutInflater,
+//        container: ViewGroup?,
+//        savedInstanceState: Bundle?
+//    ): View {
+//        _binding = FragmentCaloriesBinding.inflate(inflater, container, false)
+//        val root: View = binding.root
+//        caloriesViewModel = ViewModelProvider(
+//            this,
+//            ViewModelFactory(ApiConfig.getApiService(requireContext()))
+//        )[CaloriesViewModel::class.java]
+//
+//        // Restore image URI if exists
+//        if (savedInstanceState != null) {
+//            currentImageUri = savedInstanceState.getParcelable("imageUri")
+//            showImage()
+//        }
+//
+//        binding.submitButton.setOnClickListener {
+//            val water = binding.edtWater.text.toString()
+//            val protein = binding.edtProtein.text.toString()
+//            val lipid = binding.edtLipid.text.toString()
+//            val ash = binding.edtAsh.text.toString()
+//            val carbohydrate = binding.edtCarbohydrate.text.toString()
+//            val fiber = binding.edtFiber.text.toString()
+//            val sugar = binding.edtSugar.text.toString()
+//            val image = currentImageUri
+//
+//            if (water.isNotEmpty() && protein.isNotEmpty() && lipid.isNotEmpty() &&
+//                ash.isNotEmpty() && carbohydrate.isNotEmpty() &&
+//                fiber.isNotEmpty() && sugar.isNotEmpty() && image != null
+//            ) {
+//                val photoPart = uriToMultipart(requireContext(), image, "photo_${timeStamp}.jpg")
+//                if (photoPart != null) {
+//                    lifecycleScope.launch {
+//                        observePrediction(
+//                            photoPart,
+//                            water.toDouble(),
+//                            protein.toDouble(),
+//                            lipid.toDouble(),
+//                            ash.toDouble(),
+//                            carbohydrate.toDouble(),
+//                            fiber.toDouble(),
+//                            sugar.toDouble()
+//                        )
+//                    }
+//                } else {
+//                    Log.e(TAG, "Failed to prepare photo part")
+//                }
+//            } else {
+//                Log.e(TAG, "Please fill all fields and select an image")
+//            }
+//        }
+//
+//
+//        // Handle image selection or camera start
+//        binding.edtImage.setOnClickListener {
+//            startCamera()
+//        }
+//
+//        return root
+//    }
+//
+//
+//
+//    private fun observePrediction(
+//        photo: MultipartBody.Part,
+//        water: Number,
+//        protein: Number,
+//        lipid: Number,
+//        ash: Number,
+//        carbohydrate: Number,
+//        fiber: Number,
+//        sugar: Number
+//    ) {
+//        caloriesViewModel.predictCalories(
+//            photo,
+//            water,
+//            protein,
+//            lipid,
+//            ash,
+//            carbohydrate,
+//            fiber,
+//            sugar
+//        ).observe(viewLifecycleOwner) { response ->
+//            if (response != null) {
+//                Log.d(TAG, "Response: $response")
+//                val result = response.result
+//
+//            } else {
+//                Log.e(TAG, "Response is null")
+//            }
+//        }
+//    }
+//
+//    private fun startCamera() {
+//        currentImageUri = getImageUri(requireContext())
+//        if (currentImageUri != null) {
+//            launcherIntentCamera.launch(currentImageUri)
+//        } else {
+//            Log.e("Camera", "Failed to create image URI")
+//        }
+//    }
+//
+//    private val launcherIntentCamera = registerForActivityResult(
+//        ActivityResultContracts.TakePicture()
+//    ) { isSuccess ->
+//        if (isSuccess) {
+//            showImage()
+//        } else {
+//            currentImageUri = null
+//        }
+//    }
+//
+////
+//
+//    private fun showImage() {
+//        currentImageUri?.let {
+//            Log.d("Image URI", "showImage: $it")
+//            binding.edtImage.setImageURI(it)
+//        }
+//    }
+//
+//    override fun onDestroyView() {
+//        super.onDestroyView()
+//        _binding = null
+//    }
+//}
+
+//
+//private fun uriToFilePath(uri: Uri): String? {
+////        val cursor = requireContext().contentResolver.query(uri, null, null, null, null)
+////        cursor?.use {
+////            val columnIndex = it.getColumnIndex(MediaStore.Images.Media.DATA)
+////            if (columnIndex != -1) {
+////                it.moveToFirst()
+////                return it.getString(columnIndex)
+////            }
+////        }
+////        return null
+////    }

@@ -74,7 +74,7 @@
         <EditText
             android:id="@+id/edt_water"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="50dp"
             android:hint="water"
             android:inputType="numberDecimal"/>
 
@@ -102,7 +102,7 @@
         <EditText
             android:id="@+id/edt_protein"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="50dp"
             android:hint="protein"
             android:inputType="numberDecimal"
             />
@@ -129,7 +129,7 @@
         <EditText
             android:id="@+id/edt_lipid"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="50dp"
             android:hint="liquid"
             android:inputType="numberDecimal"/>
 
@@ -156,7 +156,7 @@
         <EditText
             android:id="@+id/edt_ash"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="50dp"
             android:hint="Ash"
             android:inputType="numberDecimal"/>
 
@@ -182,7 +182,7 @@
         <EditText
             android:id="@+id/edt_carbohydrate"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="50dp"
             android:hint="carbohydrate"
             android:inputType="numberDecimal"/>
 
@@ -208,7 +208,7 @@
         <EditText
             android:id="@+id/edt_fiber"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="50dp"
             android:hint="Fiber"
             android:inputType="numberDecimal"/>
 
@@ -234,7 +234,7 @@
         <EditText
             android:id="@+id/edt_sugar"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="50dp"
             android:hint="Sugar"
             android:inputType="numberDecimal"/>
 

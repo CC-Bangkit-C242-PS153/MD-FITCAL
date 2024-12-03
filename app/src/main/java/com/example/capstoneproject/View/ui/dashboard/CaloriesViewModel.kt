@@ -8,10 +8,11 @@ import com.example.capstoneproject.data.remote.modelRequest.CaloriesRequest
 import com.example.capstoneproject.data.remote.response.FitcalResponse
 import com.example.capstoneproject.data.remote.retrofit.ApiService
 import okhttp3.MultipartBody
+import java.io.File
 
 
 class CaloriesViewModel(private val apiService: ApiService) : ViewModel() {
-    fun predictCalories(   photo: MultipartBody.Part,  water: Number,
+    fun predictCalories(   photo: File,  water: Number,
                            protein: Number,
                            lipid: Number,
                            ash: Number,
