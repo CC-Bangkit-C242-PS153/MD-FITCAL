@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 import com.example.capstoneproject.View.BottomNavigation
 import com.example.capstoneproject.View.Register.RegisterActivity
+import com.example.capstoneproject.data.remote.saveFirebaseToken
 import com.example.capstoneproject.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -59,6 +60,7 @@ class LoginActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this){ task ->
                 if (task.isSuccessful){
+                    saveFirebaseToken(this)
                     Toast.makeText(this, "Login Successfully", Toast.LENGTH_SHORT).show()
                     reload()
                 } else{

@@ -7,5 +7,7 @@
     <color name="register_link_color">#0000EE</color>
     <color name="log_out">#b23b3b</color>
     <color name="save">#4CAF50</color>
+    <color name="bg_suggets">#E9EED9</color>
+    <color name="inputs_color">#049D9B</color>
 
 </resources>

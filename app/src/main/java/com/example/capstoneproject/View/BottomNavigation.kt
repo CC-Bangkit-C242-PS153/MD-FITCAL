@@ -8,6 +8,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.capstoneproject.R
+import com.example.capstoneproject.data.remote.saveFirebaseToken
 import com.example.capstoneproject.databinding.ActivityBottomNavigationBinding
 
 class BottomNavigation : AppCompatActivity() {
@@ -22,11 +23,8 @@ class BottomNavigation : AppCompatActivity() {
         setContentView(binding.root)
 
         val navView: BottomNavigationView = binding.navView
-
+        saveFirebaseToken(this)
         val navController = findNavController(R.id.nav_host_fragment_activity_bottom_navigation)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-
 
         navView.setupWithNavController(navController)
     }
