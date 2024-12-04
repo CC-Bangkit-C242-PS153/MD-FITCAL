@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     android:padding="16dp">
 
-    <!-- Result Section -->
+
     <androidx.cardview.widget.CardView
         android:id="@+id/card_result"
         android:layout_width="wrap_content"
@@ -25,9 +26,9 @@
             android:background="@drawable/bg_sleep"
             android:gravity="bottom|center_horizontal"
             android:textStyle="bold"
-            android:text="insomnia"
+            android:text="@string/result_sleep"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="16sp"
 
             />
     </androidx.cardview.widget.CardView>
@@ -38,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:text="Saran Untuk Anda"
+        android:text="@string/suggestion_sleep"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/card_suggestion_1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@id/card_result"
 
         />
-    <!-- Suggestion 1 -->
+
     <androidx.cardview.widget.CardView
         android:id="@+id/card_suggestion_1"
         android:layout_width="match_parent"
@@ -56,7 +57,7 @@
         android:padding="16dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="4dp"
-        app:cardBackgroundColor="@color/bg_suggets"
+        app:cardBackgroundColor="@color/card_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/card_suggestion_2"
@@ -65,6 +66,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:baselineAligned="false"
             android:orientation="horizontal">
 
 
@@ -80,7 +82,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="Peregangan ringan sebelum tidur"
+                    android:text="@string/activity"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -90,14 +92,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="Aktivitas ringan seperti peregangan dapat membantu meredakan ketegangan otot dan pikiran."
+                    android:text="@string/reason"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- Suggestion 2 -->
+
     <androidx.cardview.widget.CardView
         android:id="@+id/card_suggestion_2"
         android:layout_width="0dp"
@@ -106,8 +108,9 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:padding="16dp"
+        android:background="@color/card_view"
         app:cardCornerRadius="16dp"
-    app:cardElevation="4dp"
+        app:cardElevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/card_suggestion_1">
@@ -115,6 +118,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:baselineAligned="false"
             android:orientation="horizontal">
 
 
@@ -129,7 +133,7 @@
                     android:id="@+id/tv_activity_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Membaca buku atau mendengarkan musik relaksasi"
+                    android:text="@string/activity"
                     android:textColor="@color/black"
                     android:layout_margin="5dp"
                     android:textSize="16sp"
@@ -140,7 +144,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="Membantu menenangkan pikiran dan mengurangi kecemasan sebelum tidur."
+                    android:text="@string/reason"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
             </LinearLayout>

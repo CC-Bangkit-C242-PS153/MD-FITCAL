@@ -2,7 +2,6 @@ package com.example.capstoneproject.data.remote.retrofit
 
 
 import androidx.lifecycle.LiveData
-import com.example.capstoneproject.data.remote.modelRequest.CaloriesRequest
 import com.example.capstoneproject.data.remote.modelRequest.PhysicalRequest
 import com.example.capstoneproject.data.remote.modelRequest.SleepRequest
 

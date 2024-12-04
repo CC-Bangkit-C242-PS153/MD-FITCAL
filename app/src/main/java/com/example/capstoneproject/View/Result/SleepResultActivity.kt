@@ -23,7 +23,7 @@ class SleepResultActivity : AppCompatActivity() {
         val activity2 = intent.getStringExtra("EXTRA_ACTIVITY2")
         val reason2 = intent.getStringExtra("EXTRA_REASON2")
 
-        binding.tvResult.text = result ?: "No result available"
+        binding.tvResult.text = "Kondisi Tidur ANDA = ${result}" ?: "No result available"
         binding.tvActivity1.text = activity1 ?: "No result available"
         binding.tvReason1.text = reason1 ?: "No result available"
         binding.tvActivity2.text = activity2 ?: "No result available"

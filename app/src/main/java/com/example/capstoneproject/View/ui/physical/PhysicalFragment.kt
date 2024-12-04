@@ -7,26 +7,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.capstoneproject.View.Result.PhysicalResultActivity
-import com.example.capstoneproject.View.Result.SleepResultActivity
 import com.example.capstoneproject.View.ui.sleepcycle.SleepCycleFragment.Companion.TAG
-import com.example.capstoneproject.View.ui.sleepcycle.SleepCycleViewModel
 import com.example.capstoneproject.data.remote.ViewModelFactory
 import com.example.capstoneproject.data.remote.modelRequest.PhysicalRequest
-import com.example.capstoneproject.data.remote.modelRequest.SleepRequest
 import com.example.capstoneproject.data.remote.retrofit.ApiConfig
 import com.example.capstoneproject.databinding.FragmentPhysicalBinding
 
 
 class PhysicalFragment : Fragment() {
-
     private var _binding: FragmentPhysicalBinding? = null
     private lateinit var physicalViewModel: PhysicalViewModel
-
-
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -50,15 +44,20 @@ class PhysicalFragment : Fragment() {
             ViewModelFactory(ApiConfig.getApiService(context))
         )[PhysicalViewModel::class.java]
 
-        val genderList = listOf(0,1)
-        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, genderList)
+        val genderList = listOf("Laki Laki", "Perempuan")
+        val adapter =
+            ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, genderList)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         binding.spinnerGender.adapter = adapter
 
 
         binding.submitButton.setOnClickListener {
-            val selectedGender = binding.spinnerGender.selectedItem.toString()
-            Log.d(TAG, "Selected gender: $selectedGender")
+            val selectedGender = binding.spinnerGender.selectedItemPosition
+            val genderValue = when (selectedGender) {
+                0 -> 1
+                1 -> 0
+                else -> -1
+            }
             val age = binding.editTextAge.text.toString()
             val height = binding.editTextHeight.text.toString()
             val weight = binding.editTextWeight.text.toString()
@@ -67,10 +66,11 @@ class PhysicalFragment : Fragment() {
             val bodyTemp = binding.editTextBodyTemp.text.toString()
 
             if (age.isNotEmpty() && height.isNotEmpty() && weight.isNotEmpty()
-                && duration.isNotEmpty() && heartRate.isNotEmpty() && bodyTemp.isNotEmpty()) {
-
+                && duration.isNotEmpty() && heartRate.isNotEmpty() && bodyTemp.isNotEmpty()
+            ) {
+                binding.progressBar.visibility = View.VISIBLE
                 val physicalRequest = PhysicalRequest(
-                    gender = selectedGender.toInt(),
+                    gender = genderValue,
                     age = age.toInt(),
                     height = height.toInt(),
                     weight = weight.toInt(),
@@ -82,6 +82,7 @@ class PhysicalFragment : Fragment() {
 
                 observePrediction(physicalRequest)
             } else {
+                Toast.makeText(requireContext(), "Mohon untuk mengisi semua field",Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -90,6 +91,7 @@ class PhysicalFragment : Fragment() {
     private fun observePrediction(physicalRequest: PhysicalRequest) {
         physicalViewModel.predictPhysical(physicalRequest).observe(viewLifecycleOwner) { response ->
             if (response != null) {
+                binding.progressBar.visibility = View.GONE
                 Log.d(TAG, "Response: ${response}")
 
                 val result = response.result
@@ -105,6 +107,9 @@ class PhysicalFragment : Fragment() {
 
 
             } else {
+                binding.progressBar.visibility = View.GONE
+                Toast.makeText(requireContext(), "Mohon Maaf Terjadi kesalahan", Toast.LENGTH_SHORT)
+                    .show()
                 Log.e(TAG, "Response is null")
             }
         }

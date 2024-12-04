@@ -1,307 +1,333 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View.ui.sleepcycle.SleepCycleFragment">
+    android:background="@color/background">
 
-    <!-- Gender Spinner -->
-    <TextView
-        android:id="@+id/genderLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gender"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Spinner
-        android:id="@+id/spinnerGender"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/genderLabel" />
-
-    <!-- Age Input -->
-    <TextView
-        android:id="@+id/ageLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Age"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinnerGender" />
-
-    <EditText
-        android:id="@+id/editTextAge"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:inputType="number"
-        android:hint="Enter age"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ageLabel" />
-
-    <!-- Sleep Duration Input -->
-    <TextView
-        android:id="@+id/sleepDurationLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sleep Duration (hours)"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextAge" />
-
-    <EditText
-        android:id="@+id/editTextSleepDuration"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:inputType="number"
-        android:hint="Enter sleep duration"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sleepDurationLabel" />
-
-    <!-- Quality Sleep Input -->
-    <TextView
-        android:id="@+id/qualitySleepLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quality of Sleep (1-10)"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextSleepDuration" />
-
-    <EditText
-        android:id="@+id/editTextQualitySleep"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:inputType="number"
-        android:hint="Enter quality sleep"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/qualitySleepLabel" />
-
-    <!-- Stress Level Input -->
-    <TextView
-        android:id="@+id/stressLevelLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Stress Level (1-10)"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextQualitySleep" />
-
-    <EditText
-        android:id="@+id/editTextStressLevel"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:inputType="number"
-        android:hint="Enter stress level"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/stressLevelLabel" />
-
-    <!-- Physical Activity Level Input -->
-    <TextView
-        android:id="@+id/physicalActivityLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Physical Activity Level (1-10)"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextStressLevel" />
-
-    <EditText
-        android:id="@+id/editTextPhysicalActivity"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:inputType="number"
-        android:hint="Enter physical activity level"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/physicalActivityLabel" />
-
-    <!-- BMI Input -->
-    <TextView
-        android:id="@+id/bmiLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BMI"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextPhysicalActivity" />
-
-    <EditText
-        android:id="@+id/editTextBMI"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:inputType="number"
-        android:hint="Enter BMI"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bmiLabel" />
-
-    <!-- Heart Rate Input -->
-    <TextView
-        android:id="@+id/heartRateLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Heart Rate (bpm)"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextBMI" />
-
-    <EditText
-        android:id="@+id/editTextHeartRate"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:inputType="number"
-        android:hint="Enter heart rate"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/heartRateLabel" />
-
-    <!-- Daily Steps Input -->
-    <TextView
-        android:id="@+id/dailyStepsLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Daily Steps"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextHeartRate" />
-
-    <EditText
-        android:id="@+id/editTextDailySteps"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:hint="Enter daily steps"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dailyStepsLabel" />
-
-    <!-- Systolic Pressure Input -->
-    <TextView
-        android:id="@+id/systolicLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Systolic Pressure (mmHg)"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextDailySteps" />
-
-    <EditText
-        android:id="@+id/editTextSystolic"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:inputType="number"
-        android:hint="Enter systolic pressure"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/systolicLabel" />
-
-    <!-- Diastolic Pressure Input -->
-    <TextView
-        android:id="@+id/diastolicLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Diastolic Pressure (mmHg)"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextSystolic" />
-
-
-    <EditText
-        android:id="@+id/editTextDiastolic"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:hint="Enter diastolic pressure"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/diastolicLabel" />
-
-    <Button
-        android:id="@+id/submitButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Submit"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDiastolic" />
-
-    <Space
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-    app:layout_constraintTop_toBottomOf="@id/submitButton" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent"
+        tools:context=".View.ui.sleepcycle.SleepCycleFragment">
+
+        <!-- Gender Spinner -->
+        <TextView
+            android:id="@+id/genderLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/gender"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinnerGender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/genderLabel" />
+
+        <!-- Age Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ageEditTextLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/text_input_color"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinnerGender"
+            tools:alpha="100">
+
+            <EditText
+                android:id="@+id/editTextAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/age"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Sleep Duration Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sleepDurationEditTextLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/text_input_color"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ageEditTextLayout"
+            tools:alpha="100">
+
+            <EditText
+                android:id="@+id/editTextSleepDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/sleep_duration"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Quality Sleep Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/qualitySleepEditTextLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/text_input_color"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sleepDurationEditTextLayout"
+            tools:alpha="100">
+
+            <EditText
+                android:id="@+id/editTextQualitySleep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/quality_sleep"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Stress Level Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/stressLevelEditTextLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/text_input_color"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/qualitySleepEditTextLayout"
+            tools:alpha="100">
+
+            <EditText
+                android:id="@+id/editTextStressLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/stress_level"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Physical Activity Level Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/physicalActivityEditTextLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/text_input_color"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/stressLevelEditTextLayout"
+            tools:alpha="100">
+
+            <EditText
+                android:id="@+id/editTextPhysicalActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/physical_activity"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/bmiEditTextLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/text_input_color"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/physicalActivityEditTextLayout"
+            tools:alpha="100">
+
+            <EditText
+                android:id="@+id/editTextBMI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/bmi"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Heart Rate Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/heartRateTextLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/text_input_color"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bmiEditTextLayout"
+            tools:alpha="100">
+
+            <EditText
+                android:id="@+id/editTextHeartRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/heart_rate"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Daily Steps Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dailyStepsTextLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/text_input_color"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/heartRateTextLayout"
+            tools:alpha="100">
+
+            <EditText
+                android:id="@+id/editTextDailySteps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/daily_steps"
+                android:inputType="number"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Systolic Pressure Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/systolicTextLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/text_input_color"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dailyStepsTextLayout"
+            tools:alpha="100">
+
+            <EditText
+                android:id="@+id/editTextSystolic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/systolic"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Diastolic Pressure Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/diastolicTextLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/text_input_color"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/systolicTextLayout"
+            tools:alpha="100">
+
+            <EditText
+                android:id="@+id/editTextDiastolic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/diastolic"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone" />
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/prediction"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/diastolicTextLayout" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toBottomOf="@id/submitButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

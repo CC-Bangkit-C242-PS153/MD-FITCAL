@@ -2,7 +2,6 @@ package com.example.capstoneproject.data
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.capstoneproject.data.remote.modelRequest.CaloriesRequest
 import com.example.capstoneproject.data.remote.modelRequest.PhysicalRequest
 import com.example.capstoneproject.data.remote.modelRequest.SleepRequest
 import com.example.capstoneproject.data.remote.response.FitcalResponse

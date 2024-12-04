@@ -4,6 +4,15 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
+    <style name="ShapeAppearance_MaterialCard_BottomRadius" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerSizeBottomLeft">16dp</item>
+        <item name="cornerSizeBottomRight">16dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+
+    </style>
+
+
 
     <style name="Theme.CapstoneProject" parent="Base.Theme.CapstoneProject" />
 </resources>
