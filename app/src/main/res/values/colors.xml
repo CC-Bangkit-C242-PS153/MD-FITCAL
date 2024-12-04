@@ -2,10 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="background">#E9EED9</color>
+    <color name="background">#FFF7D1</color>
     <color name="Welcome_color">#54473F</color>
     <color name="register_link_color">#0000EE</color>
     <color name="log_out">#b23b3b</color>
     <color name="save">#4CAF50</color>
-
+    <color name="bg_suggets">#E9EED9</color>
+    <color name="inputs_color">#049D9B</color>
+    <color name="card_view">#DCE4C9</color>
+    <color name="text_input_color">#E5E3D4</color>
 </resources>

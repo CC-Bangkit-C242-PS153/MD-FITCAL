@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/background">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -58,6 +59,7 @@
                 android:ems="10"
                 android:hint="@string/name_register"
                 android:inputType="textEmailAddress"
+
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:textColor="@color/black"
