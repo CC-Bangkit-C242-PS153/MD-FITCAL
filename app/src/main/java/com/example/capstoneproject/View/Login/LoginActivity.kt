@@ -3,6 +3,7 @@ package com.example.capstoneproject.View.Login
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -45,6 +46,7 @@ class LoginActivity : AppCompatActivity() {
                 binding.PasswordTextInput.requestFocus()
                 return@setOnClickListener
             }
+            binding.progressBar.visibility = View.VISIBLE
            loginUser(email,password)
         }
     }
@@ -60,10 +62,12 @@ class LoginActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this){ task ->
                 if (task.isSuccessful){
+                    binding.progressBar.visibility = View.GONE
                     saveFirebaseToken(this)
                     Toast.makeText(this, "Login Successfully", Toast.LENGTH_SHORT).show()
                     reload()
                 } else{
+                    binding.progressBar.visibility = View.GONE
                     Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show()
                     Log.e("Login Fail", task.exception?.message.toString())
                 }
