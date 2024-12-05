@@ -11,7 +11,7 @@ import android.view.ViewTreeObserver
 import androidx.appcompat.widget.AppCompatEditText
 import com.google.android.material.textfield.TextInputLayout
 
-class MyEditText @JvmOverloads constructor (
+class MyEmailCustom @JvmOverloads constructor (
     context: Context,
     attrs: AttributeSet? = null
 ): AppCompatEditText(context,attrs), View.OnTouchListener {

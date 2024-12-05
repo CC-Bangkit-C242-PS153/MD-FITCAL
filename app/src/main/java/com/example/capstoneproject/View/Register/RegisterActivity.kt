@@ -4,6 +4,7 @@ import android.content.Intent
 import android.nfc.Tag
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -59,27 +60,11 @@ class RegisterActivity : AppCompatActivity() {
                 binding.passwordTextInput.requestFocus()
                 return@setOnClickListener
             }
-
+            binding.progressBar.visibility = View.VISIBLE
             registerUser(name, dateOfBirth, gender, email, password)
         }
 
     }
-
-//    private fun registerUser(email: String, password: String) {
-//        auth.createUserWithEmailAndPassword(email,password)
-//            .addOnCompleteListener(this){ task ->
-//                if (task.isSuccessful){
-//                    Toast.makeText(this, "SignUp Succesfully", Toast.LENGTH_SHORT).show()
-//                    reload()
-//                }else{
-//                    Toast.makeText(this,"SignUp failed : ${task.exception?.message}", Toast.LENGTH_SHORT).show()
-//                    Log.e(TAG,task.exception?.message.toString())
-//                }
-//
-//            }
-//
-//
-//    }
 
     private fun registerUser(
         name: String, dateOfBirth: String, gender: String,
@@ -88,11 +73,13 @@ class RegisterActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
+                    binding.progressBar.visibility = View.GONE
                     val userId = auth.currentUser?.uid
                     if (userId != null) {
                         saveUserData(userId, name, dateOfBirth, gender, email)
                     }
                 } else {
+                    binding.progressBar.visibility = View.GONE
                     Toast.makeText(
                         this, "SignUp failed: ${task.exception?.message}", Toast.LENGTH_SHORT
                     ).show()

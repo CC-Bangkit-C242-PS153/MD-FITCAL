@@ -19,16 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/fitcal_logo" />
 
-    <TextView
-        android:id="@+id/emailTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="@string/email"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_logo" />
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailTextInput"
@@ -37,33 +28,27 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
         android:alpha="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/emailTextView"
+        app:layout_constraintTop_toBottomOf="@id/img_logo"
         app:startIconDrawable="@drawable/ic_baseline_email_24"
         tools:alpha="100">
 
-        <com.example.capstoneproject.View.CustomView.MyEmailView
+        <com.example.capstoneproject.View.CustomView.MyEmailCustom
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:alpha="1"
             android:ems="10"
+            android:paddingStart="40dp"
+            android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:textColor="@color/black"
             tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/passwordTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="@string/password"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/emailTextInput" />
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/PasswordTextInput"
@@ -72,19 +57,22 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
         android:alpha="1"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passwordTextView"
+        app:layout_constraintTop_toBottomOf="@id/emailTextInput"
         app:startIconDrawable="@drawable/ic_baseline_lock_24"
         tools:alpha="100">
 
-            <com.example.capstoneproject.View.CustomView.MyPasswordView
+            <com.example.capstoneproject.View.CustomView.MyPasswordCustom
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:ems="10"
                 android:alpha="1"
+                android:paddingStart="40dp"
+                android:hint="@string/password"
                 android:textColor="@color/black"
                 android:inputType="textPassword"
                 tools:ignore="SpeakableTextPresentCheck"/>
@@ -95,7 +83,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
         android:backgroundTint="@color/cardview_dark_background"
         android:text="@string/login"
@@ -113,6 +101,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/loginButton"
         />
+
 
 <ImageView
     android:id="@+id/google_logo"
@@ -156,5 +145,14 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@id/linear"/>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
