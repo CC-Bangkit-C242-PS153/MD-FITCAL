@@ -122,15 +122,17 @@ class CaloriesFragment : Fragment() {
                 binding.lnLayoutSuggestion.visibility = View.VISIBLE
                 Log.d(TAG, "Response: $response")
                 val result = response.result
-                binding.tvCaloriesResult.text = "${result?.foodCalories.toString()} gram"
+                binding.tvCaloriesResult.text = "${result?.foodCalories.toString()} Kkal"
                 binding.tvFoodResult.text = result?.foodCategory.toString()
                 binding.edtSuggestion1.text = result?.suggestion?.activities1?.activity.toString()
                 binding.edtReason1.text = result?.suggestion?.activities1?.reason.toString()
                 binding.edtSuggestion2.text = result?.suggestion?.activities2?.activity.toString()
                 binding.edtReason2.text = result?.suggestion?.activities2?.reason.toString()
+                binding.tvCaloriesClass.text = result?.foodCaloriesClass?.toString()
             } else {
                 binding.lnLayoutResultFoodCalories.visibility = View.GONE
                 binding.lnLayoutSuggestion.visibility = View.GONE
+                binding.progressBar.visibility = View.GONE
                 Toast.makeText(requireContext(), "Mohon Maaf Terjadi kesalahan", Toast.LENGTH_SHORT).show()
                 Log.e(TAG, "Response is null")
             }

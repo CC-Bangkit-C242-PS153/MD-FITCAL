@@ -37,6 +37,7 @@
     <string name="reason">Aktivitas ringan seperti peregangan dapat membantu meredakan ketegangan otot dan pikiran.</string>
     <string name="prediction">PREDIKSI</string>
     <string name="calorie_count">Jumlah Kalori</string>
+    <string name="calorie_Category">Kategori Kalori</string>
     <string name="water">Air</string>
     <string name="food_category">Kategori Makanan</string>
     <string name="protein">Protein</string>

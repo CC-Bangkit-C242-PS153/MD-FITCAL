@@ -16,10 +16,12 @@ import com.google.firebase.ktx.Firebase
 class ProfileFragment : Fragment() {
     private lateinit var binding: FragmentProfileBinding
     private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         activity?.actionBar?.hide()
         super.onCreate(savedInstanceState)
         auth = Firebase.auth
+
 
 
     }
@@ -30,6 +32,7 @@ class ProfileFragment : Fragment() {
     ): View? {
         binding = FragmentProfileBinding.inflate(layoutInflater, container, false)
         // Inflate the layout for this fragment
+
 
         binding.logoutButton.setOnClickListener {
             logout()
