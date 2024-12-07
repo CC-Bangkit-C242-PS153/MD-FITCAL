@@ -43,7 +43,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/tv_FoodResultCard"
                         android:layout_width="0dp"
-                        android:layout_height="50dp"
+                        android:layout_height="70dp"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
                         app:cardBackgroundColor="@color/card_view"
@@ -60,7 +60,8 @@
                                 android:id="@+id/tv_FoodResultLabel"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/food_category" />
+                                android:text="@string/food_category"
+                                android:textSize="13sp"/>
 
                             <TextView
                                 android:id="@+id/tv_FoodResult"
@@ -74,7 +75,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/tv_CaloriesResultCard"
                         android:layout_width="0dp"
-                        android:layout_height="50dp"
+                        android:layout_height="70dp"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
                         app:cardBackgroundColor="@color/card_view"
@@ -91,10 +92,42 @@
                                 android:id="@+id/tv_CaloriesResultLabel"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:textSize="13sp"
                                 android:text="@string/calorie_count" />
 
                             <TextView
                                 android:id="@+id/tv_CaloriesResult"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/water" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tv_CaloriesCategoryCard"
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/card_view"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tv_CaloriesClassLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="13sp"
+                                android:text="@string/calorie_Category" />
+
+                            <TextView
+                                android:id="@+id/tv_CaloriesClass"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/water" />

@@ -42,6 +42,9 @@ data class Result(
 	@field:SerializedName("foodCalories")
 	val foodCalories: Any? = null,
 
+	@field:SerializedName("foodCaloriesClass")
+	val foodCaloriesClass: Any? = null,
+
 	@field:SerializedName("userId")
 	val userId: String? = null,
 
