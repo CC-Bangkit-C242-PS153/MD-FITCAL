@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="@string/edit_profile"
+            android:text="@string/profile"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -36,73 +36,81 @@
             android:src="@drawable/fitcal_logo" />
 
         <!-- Edit Name -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/name_input_layout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <TextView
+            android:id="@+id/name_edit_text_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/text_input_color"
-            android:layout_marginBottom="12dp">
+            android:text="@string/name_register"
+            android:textStyle="bold"
+           />
 
-            <com.google.android.material.textfield.TextInputEditText
+            <TextView
                 android:id="@+id/name_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/name_register"
+                android:layout_marginTop="10dp"
 
-                android:inputType="textPersonName" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:text="@string/name_register"
+           />
+
 
         <!-- Edit Email -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/email_input_layout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <TextView
+            android:id="@+id/email_edit_text_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/text_input_color"
-            android:layout_marginBottom="12dp">
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:text="@string/email"
+            />
 
-            <com.google.android.material.textfield.TextInputEditText
+            <TextView
                 android:id="@+id/email_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/email"
-                android:inputType="textEmailAddress" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_marginTop="10dp"
+                android:text="@string/email"
+                 />
+
 
         <!-- Edit Date of Birth -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/dob_input_layout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <TextView
+            android:id="@+id/dob_edit_text_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/text_input_color"
-            android:layout_marginBottom="12dp">
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:text="@string/edt_date_of_birth"
+         />
 
-            <com.google.android.material.textfield.TextInputEditText
+            <TextView
                 android:id="@+id/dob_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/edt_date_of_birth"
-                android:inputType="date" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_marginTop="10dp"
+                android:text="@string/edt_date_of_birth"
+       />
+
 
         <!-- Edit Gender -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/gender_input_layout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <TextView
+            android:id="@+id/gender_edit_text_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/text_input_color"
-            android:layout_marginBottom="12dp">
+            android:text="@string/edt_gender"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+          />
 
-            <com.google.android.material.textfield.TextInputEditText
+
+            <TextView
                 android:id="@+id/gender_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/edt_gender"
+                android:text="@string/edt_gender"
+                android:layout_marginTop="10dp"
                 android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
+
 
         <!-- Save Button -->
         <Button
