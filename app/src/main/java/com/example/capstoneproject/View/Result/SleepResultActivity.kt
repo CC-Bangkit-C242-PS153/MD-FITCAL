@@ -3,12 +3,7 @@ package com.example.capstoneproject.View.Result
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.capstoneproject.R
 import com.example.capstoneproject.databinding.ActivitySleepResultBinding
-import com.example.capstoneproject.databinding.FragmentSleepcycleBinding
-
 class SleepResultActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySleepResultBinding
     override fun onCreate(savedInstanceState: Bundle?) {

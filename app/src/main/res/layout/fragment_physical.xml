@@ -11,8 +11,6 @@
         android:layout_height="match_parent"
         tools:context=".View.ui.sleepcycle.SleepCycleFragment">
 
-
-
         <TextView
             android:id="@+id/genderLabel"
             android:layout_width="wrap_content"
@@ -63,10 +61,7 @@
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Age Input -->
 
-
-        <!-- Sleep Duration Input -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/heightEditTextLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -87,6 +82,7 @@
                 android:id="@+id/editTextHeight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:hint="@string/high"
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -116,7 +112,6 @@
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Quality Sleep Input -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/durationEditTextLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -166,9 +161,6 @@
                 android:hint="@string/heart_rate"
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
-
-
-        <!-- Physical Activity Level Input -->
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/bodyTempRateEditTextLayout"

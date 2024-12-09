@@ -53,15 +53,15 @@
     <string name="daily_steps">Jumlah Langkah perhari</string>
     <string name="heart_rate">Detak Jantung permenit</string>
     <string name="bmi">BMI</string>
-    <string name="physical_activity">Tingkat Aktivitas Fisik</string>
-    <string name="stress_level">Tingkat Stres</string>
-    <string name="quality_sleep">Kualitas Tidur</string>
+    <string name="physical_activity">Tingkat Aktivitas Fisik (1 - 10)</string>
+    <string name="stress_level">Tingkat Stres (1 - 10)</string>
+    <string name="quality_sleep">Kualitas Tidur (1 -10)</string>
     <string name="sleep_duration">Durasi tidur anda perhari (jam)</string>
     <string name="age">Umur</string>
     <string name="gender">Jenis Kelamin</string>
     <string name="save_changes">Simpan Perubahan</string>
     <string name="body_temp">suhu tubuh (celcius)</string>
-    <string name="activity_duration">Durasi Aktivitas</string>
-    <string name="weight">Berat Badan (cm)</string>
+    <string name="activity_duration">Durasi Aktivitas (jam)</string>
+    <string name="weight">Berat Badan (Kg)</string>
     <string name="high">Tinggi Badan (cm)</string>
 </resources>

@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import com.example.capstoneproject.data.FitcalRepository
 import com.example.capstoneproject.data.remote.response.FitcalResponse
 import com.example.capstoneproject.data.remote.retrofit.ApiService
-import okhttp3.MultipartBody
 import java.io.File
 
 
