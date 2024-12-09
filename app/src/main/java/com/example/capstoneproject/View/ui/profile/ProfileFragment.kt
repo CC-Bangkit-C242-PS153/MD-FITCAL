@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.example.capstoneproject.R
 import com.example.capstoneproject.View.Login.LoginActivity
 import com.example.capstoneproject.databinding.FragmentProfileBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -32,7 +31,7 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentProfileBinding.inflate(layoutInflater, container, false)
-        // Inflate the layout for this fragment
+
 
         loadUserProfile()
         binding.logoutButton.setOnClickListener {
@@ -53,27 +52,27 @@ class ProfileFragment : Fragment() {
     }
 
     private fun loadUserProfile() {
-        val userId = auth.currentUser?.uid // Dapatkan UID pengguna saat ini
+        val userId = auth.currentUser?.uid
         if (userId != null) {
             val db = Firebase.firestore
             db.collection("users").document(userId)
                 .get()
                 .addOnSuccessListener { document ->
                     if (document.exists()) {
-                        // Ambil data dari Firestore
+
                         val name = document.getString("name") ?: "Nama tidak tersedia"
                         val email = document.getString("email") ?: "Email tidak tersedia"
                         val gender = document.getString("gender") ?: "Jenis kelamin tidak tersedia"
                         val dateOfBirth =
                             document.getString("dateOfBirth") ?: "Tanggal lahir tidak tersedia"
 
-                        // Set data ke TextView
+
                         binding.nameEditText.text = name
                         binding.emailEditText.text = email
                         binding.genderEditText.text = gender
                         binding.dobEditText.text = dateOfBirth
                     } else {
-                        // Jika dokumen tidak ditemukan
+
                         Toast.makeText(
                             requireContext(),
                             "Profil tidak ditemukan",
@@ -82,7 +81,7 @@ class ProfileFragment : Fragment() {
                     }
                 }
                 .addOnFailureListener { exception ->
-                    // Tangani error saat mengambil data
+
                     Toast.makeText(
                         requireContext(),
                         "Gagal memuat profil: ${exception.message}",
@@ -90,7 +89,7 @@ class ProfileFragment : Fragment() {
                     ).show()
                 }
         } else {
-            // Jika pengguna tidak login
+
             Toast.makeText(requireContext(), "Pengguna tidak terautentikasi", Toast.LENGTH_SHORT)
                 .show()
         }

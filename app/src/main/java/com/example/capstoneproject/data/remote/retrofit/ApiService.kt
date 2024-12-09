@@ -1,10 +1,9 @@
 package com.example.capstoneproject.data.remote.retrofit
 
 
-import androidx.lifecycle.LiveData
+
 import com.example.capstoneproject.data.remote.modelRequest.PhysicalRequest
 import com.example.capstoneproject.data.remote.modelRequest.SleepRequest
-
 import com.example.capstoneproject.data.remote.response.FitcalResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody

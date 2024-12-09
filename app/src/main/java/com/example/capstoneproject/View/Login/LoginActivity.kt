@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-
 import com.example.capstoneproject.View.BottomNavigation
 import com.example.capstoneproject.View.Register.RegisterActivity
 import com.example.capstoneproject.data.remote.saveFirebaseToken
@@ -15,8 +14,6 @@ import com.example.capstoneproject.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import kotlin.math.log
-
 class LoginActivity : AppCompatActivity() {
     private lateinit var auth : FirebaseAuth
     private lateinit var binding: ActivityLoginBinding

@@ -126,7 +126,6 @@ class SleepCycleFragment : Fragment() {
                 }
                 startActivity(intent)
 
-
             } else {
                 binding.progressBar.visibility = View.GONE
                 Toast.makeText(requireContext(), "Mohon Maaf Terjadi kesalahan", Toast.LENGTH_SHORT).show()

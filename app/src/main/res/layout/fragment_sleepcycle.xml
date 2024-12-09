@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         tools:context=".View.ui.sleepcycle.SleepCycleFragment">
 
-        <!-- Gender Spinner -->
+
         <TextView
             android:id="@+id/genderLabel"
             android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/genderLabel" />
 
-        <!-- Age Input -->
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/ageEditTextLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -61,8 +61,6 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
-        <!-- Sleep Duration Input -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/sleepDurationEditTextLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -89,7 +87,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        <!-- Quality Sleep Input -->
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/qualitySleepEditTextLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -115,8 +113,6 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
-        <!-- Stress Level Input -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/stressLevelEditTextLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -142,8 +138,6 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
-        <!-- Physical Activity Level Input -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/physicalActivityEditTextLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -195,8 +189,6 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
-        <!-- Heart Rate Input -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/heartRateTextLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -222,8 +214,6 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
-        <!-- Daily Steps Input -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/dailyStepsTextLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -251,8 +241,6 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
-        <!-- Systolic Pressure Input -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/systolicTextLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -278,8 +266,6 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
-        <!-- Diastolic Pressure Input -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/diastolicTextLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"

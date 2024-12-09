@@ -11,9 +11,12 @@
         android:id="@+id/card_result"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="10dp"
-        android:layout_margin="5dp"
         app:layout_constraintBottom_toTopOf="@id/suggestion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,10 +28,10 @@
             android:layout_height="match_parent"
             android:background="@drawable/bg_sleep"
             android:gravity="bottom|center_horizontal"
-            android:textStyle="bold"
             android:text="@string/result_sleep"
             android:textColor="@color/white"
             android:textSize="16sp"
+            android:textStyle="bold"
 
             />
     </androidx.cardview.widget.CardView>
@@ -55,12 +58,12 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:padding="16dp"
+        app:cardBackgroundColor="@color/card_view"
         app:cardCornerRadius="16dp"
         app:cardElevation="4dp"
-        app:cardBackgroundColor="@color/card_view"
+        app:layout_constraintBottom_toTopOf="@id/card_suggestion_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/card_suggestion_2"
         app:layout_constraintTop_toBottomOf="@id/suggestion">
 
         <LinearLayout
@@ -104,11 +107,11 @@
         android:id="@+id/card_suggestion_2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="5dp"
-        android:padding="16dp"
         android:background="@color/card_view"
+        android:padding="16dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -133,9 +136,9 @@
                     android:id="@+id/tv_activity_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
                     android:text="@string/activity"
                     android:textColor="@color/black"
-                    android:layout_margin="5dp"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 

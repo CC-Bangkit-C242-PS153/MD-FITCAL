@@ -9,6 +9,9 @@
         <item name="cornerSizeBottomRight">16dp</item>
         <item name="cornerSizeTopLeft">0dp</item>
         <item name="cornerSizeTopRight">0dp</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="29">false</item>
+
+
 
     </style>
 

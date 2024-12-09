@@ -6,9 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.capstoneproject.R
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.capstoneproject.View.Login.LoginActivity
 import com.example.capstoneproject.databinding.ActivityMainBinding
 
@@ -19,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         setContentView(binding.root)
 
         val delay: Long = 5000

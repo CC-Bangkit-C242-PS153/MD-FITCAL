@@ -15,6 +15,7 @@
         <activity
             android:name=".View.Result.PhysicalResultActivity"
             android:exported="false" />
+
         <activity
             android:name=".View.Result.SleepResultActivity"
             android:exported="false" />

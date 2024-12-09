@@ -1,16 +1,12 @@
 package com.example.capstoneproject.View.Register
 
 import android.content.Intent
-import android.nfc.Tag
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.capstoneproject.R
 import com.example.capstoneproject.View.BottomNavigation
 import com.example.capstoneproject.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth

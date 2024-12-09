@@ -3,22 +3,23 @@
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/body_language_gesture_"
         android:title="@string/title_physical" />
 
     <item
         android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:icon="@drawable/healthy_nutrition"
         android:title="@string/title_calories" />
 
     <item
         android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@drawable/star_moon_crescent"
         android:title="@string/title_sleepcycle" />
 
     <item
         android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@drawable/person_24dp"
+        android:iconTint="@color/black"
         android:title="@string/title_profile" />
 
 </menu>

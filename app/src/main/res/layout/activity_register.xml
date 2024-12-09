@@ -79,7 +79,6 @@
                 android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Repeat similar TextInputLayouts -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edt_date_of_birth"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -124,7 +123,6 @@
                 android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Add MyEmailCustom -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailTextInput"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -168,7 +166,7 @@
                 android:paddingEnd="20dp"
                 android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
-        <!-- Checkbox -->
+
         <CheckBox
             android:id="@+id/checkbox_1"
             android:layout_width="wrap_content"
@@ -179,7 +177,7 @@
             app:layout_constraintTop_toBottomOf="@id/passwordTextInput"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <!-- Button -->
+
         <Button
             android:id="@+id/signupButton"
             android:layout_width="0dp"
