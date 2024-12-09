@@ -166,6 +166,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:hint="@string/water"
+                    android:textSize="14sp"
                     android:inputType="numberDecimal" />
             </androidx.cardview.widget.CardView>
 
@@ -185,6 +186,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:hint="@string/protein"
+                    android:textSize="14sp"
                     android:inputType="numberDecimal" />
             </androidx.cardview.widget.CardView>
 
@@ -204,6 +206,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:hint="@string/oil"
+                    android:textSize="14sp"
                     android:inputType="numberDecimal" />
             </androidx.cardview.widget.CardView>
 
@@ -223,9 +226,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:hint="@string/ash"
+                    android:textSize="14sp"
                     android:inputType="numberDecimal" />
             </androidx.cardview.widget.CardView>
 
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ln_layout">
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_fiber"
                 android:layout_width="0dp"
@@ -243,20 +260,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:hint="@string/fiber"
+                    android:textSize="14sp"
                     android:inputType="numberDecimal" />
             </androidx.cardview.widget.CardView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ln_layout2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="5dp"
-            android:visibility="visible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ln_layout">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_carbohydrate"
@@ -275,6 +281,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:hint="@string/carbohydrate"
+                    android:textSize="14sp"
                     android:inputType="numberDecimal" />
             </androidx.cardview.widget.CardView>
 
@@ -295,6 +302,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:hint="@string/sugar"
+                    android:textSize="14sp"
                     android:inputType="numberDecimal" />
             </androidx.cardview.widget.CardView>
         </LinearLayout>
