@@ -103,40 +103,45 @@ Follow these steps to run the project locally:
 1. Clone the repository:
    ```bash
    git clone https://github.com/CC-Bangkit-C242-PS153/MD-FITCAL
-      -Open the project in Android Studio:
-        -Open Android Studio.
-        -Select Open Project.
-        -Navigate to the folder where the repository was cloned and click OK.
+  - Run projects on emulators or real devices
+  - Sync all Gradle dependencies
+  - Run projects on emulators or real devices
 
----
+
+  ---
 ## 📂 Struktur Folder
+Struktur folder proyek ini adalah sebagai berikut:
+
+```plaintext
 ├── data/
 │   ├── di/                     # Dependency Injection
 │   ├── remote/
-│       ├── modelRequest/       # API request models
-│       ├── response/           # API response models
-│       ├── retrofit/           # Retrofit configurations
+│       ├── modelRequest/       # Model request untuk API
+│       ├── response/           # Model respons API
+│       ├── retrofit/           # Konfigurasi Retrofit
 │
 ├── View/
-│   ├── CustomView/             # Custom UI components
-│   ├── Login/                  # Login feature
-│   ├── Main/                   # Main screen
-│   ├── Register/               # Registration screen
-│   ├── Result/                 # Analysis results
+│   ├── CustomView/             # Custom View komponen UI
+│   ├── Login/                  # Fitur Login
+│   ├── Main/                   # Halaman utama aplikasi
+│   ├── Register/               # Halaman Registrasi
+│   ├── Result/                 # Hasil analisis
 │   ├── ui/
-│       ├── dashboard/          # Main dashboard
-│       ├── physical/           # Physical activity tracking
-│       ├── profile/            # User profile
-│       ├── sleepcycle/         # Sleep pattern analysis
-│   ├── BottomNavigation/       # Main navigation
+│       ├── dashboard/          # Dashboard utama
+│       ├── physical/           # Pelacakan aktivitas fisik
+│       ├── profile/            # Profil pengguna
+│       ├── sleepcycle/         # Analisis pola tidur
+│   ├── BottomNavigation/       # Navigasi utama aplikasi
 ├── res/                         # Resources
-│   ├── drawable/               # App images
-│   ├── layout/                 # XML layouts for UI
-│   ├── menu/                   # Menu XML files
-│   ├── mipmap/                 # App icons
-│   ├── navigation/             # Navigation files
-│   ├── values/                 # Values (strings, colors, dimensions, styles)
-│   ├── xml/                    # Other XML resources
+│   ├── drawable/               # Gambar yang digunakan di aplikasi
+│   ├── layout/                 # Layout XML untuk UI
+│   ├── menu/                   # Menu XML
+│   ├── mipmap/                 # Ikon aplikasi
+│   ├── navigation/             # Navigasi
+│   ├── values/                 # File values (strings, colors, dimens, styles)
+│   ├── xml/                    # File XML lainnya
+
+
 📦 dependencies
 dependencies {
 
