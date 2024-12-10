@@ -137,8 +137,6 @@ Follow these steps to run the project locally:
 │   ├── navigation/             # Navigation files
 │   ├── values/                 # Values (strings, colors, dimensions, styles)
 │   ├── xml/                    # Other XML resources
-
-
 📦 dependencies
 dependencies {
 
