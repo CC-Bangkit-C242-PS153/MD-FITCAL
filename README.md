@@ -110,7 +110,7 @@ Follow these steps to run the project locally:
 
   ---
 ## 📂 Struktur Folder
-Struktur folder proyek ini adalah sebagai berikut:
+The folder structure of this project is as follows:
 
 ```plaintext
 ├── data/
