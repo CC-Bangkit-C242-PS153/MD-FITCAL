@@ -10,137 +10,131 @@
 
 ---
 
-## **📖 Deskripsi**
-<div align="justify">
-Bagian Mobile Development bertanggung jawab untuk membangun aplikasi yang memungkinkan pengguna memanfaatkan fitur-fitur utama seperti prediksi kalori, analisis pola tidur, dan pelacakan aktivitas fisik.
-</div>
+## **📖 Description**
+The Mobile Development team is responsible for building an application that enables users to utilize key features such as calorie prediction, sleep pattern analysis, and physical activity tracking.
 
 ---
 
-## **🔥 Fitur App Fitcal**
-- **📱 Registrasi dan Login**: Membuat akun baru dan login menggunakan email.
-- **🍛 Prediksi Kalori**: Mendapatkan prediksi kalori dari makanan dengan mengunggah foto.
-- **🌙 Analisis Pola Tidur**: Rekomendasi pola tidur yang sehat berdasarkan data pengguna.
-- **🏃 Pelacakan Aktivitas Fisik**: Melacak aktivitas fisik dan memberikan saran sesuai aktivitas pengguna.
+## **🔥 Features of Fitcal App**
+- **📱 Registration and Login**: Allows users to create a new account and log in using their email.
+- **🍛 Calorie Prediction**: Provides calorie prediction by uploading a food image.
+- **🌙 Sleep Pattern Analysis**: Recommends healthy sleep patterns based on user data.
+- **🏃 Physical Activity Tracking**: Tracks physical activity and provides suggestions based on user activity.
 
 ---
 
-## **📋 Implementasi Fitur Utama**
+## **📋 Implementation of Main Features**
 
-### **🔑 Workflow Akses Fitur Utama**
-- Implementasi alur kerja aplikasi yang memungkinkan pengguna untuk mengakses fitur utama secara langsung dan intuitif.
-- Alur mencakup proses **autentikasi pengguna**, navigasi ke fitur utama seperti **prediksi kalori**, **analisis pola tidur**, dan **pelacakan aktivitas fisik**.
+### **🔑 Workflow to Access Main Features**
+- Implementation of an application workflow that enables users to access main features directly and intuitively.
+- The workflow includes **user authentication**, navigation to key features such as **calorie prediction**, **sleep pattern analysis**, and **physical activity tracking**.
 
-### **🧠 Integrasi AI/ML**
-- Mengintegrasikan kemampuan **AI/ML** sebagai fitur utama aplikasi, baik melalui layanan cloud maupun pemrosesan langsung di perangkat.
-- Contoh penerapan:
-  - **Prediksi Kalori**: Memanfaatkan model ML untuk menganalisis gambar makanan yang diunggah pengguna dan menghasilkan estimasi kalori.
-  - **Analisis Pola Tidur**: Menggunakan algoritme berbasis data untuk memberikan rekomendasi pola tidur yang sehat.
-  - **Pelacakan Aktivitas Fisik**: Menggunakan AI untuk menganalisis data dari sensor perangkat (seperti langkah dan jarak tempuh), menghitung kalori yang terbakar, dan memberikan notifikasi pengingat aktivitas untuk menjaga kesehatan pengguna.
-
+### **🧠 AI/ML Integration**
+- Integration of **AI/ML** capabilities as the main feature of the application, either through cloud services or on-device processing.
+- Examples of implementation:
+  - **Calorie Prediction**: Utilizes ML models to analyze food images uploaded by users and generate calorie estimates.
+  - **Sleep Pattern Analysis**: Uses data-driven algorithms to provide recommendations for healthy sleep patterns.
+  - **Physical Activity Tracking**: Employs AI to analyze sensor data (e.g., steps and distance), calculate burned calories, and send reminders to keep users active for better health.
 
 ### **🌐 Networking API**
-- Implementasi pemanggilan jaringan menggunakan **Retrofit** untuk berinteraksi dengan API proyek.
-- API digunakan untuk mengakses data seperti prediksi kalori, pola tidur, dan pelacakan aktivitas fisik secara real-time.
+- Implementation of networking calls using **Retrofit** to interact with the project's API.
+- The API is used to access real-time data such as calorie predictions, sleep patterns, and physical activity tracking.
 
-### **🚫 Menjamin Stabilitas Aplikasi**
-- Memastikan implementasi fitur utama berjalan tanpa menyebabkan aplikasi crash.
-- Penggunaan validasi input dan penanganan error yang optimal untuk menjaga pengalaman pengguna tetap mulus.
+### **🚫 Ensuring Application Stability**
+- Ensures that the main features are implemented without causing application crashes.
+- Validates inputs and optimizes error handling to maintain a seamless user experience.
 
-### **🎨 Ikon Aplikasi Kustom**
-- Menambahkan ikon aplikasi khusus untuk memberikan identitas visual yang unik.
+### **🎨 Custom App Icon**
+- Adds a custom application icon to provide a unique visual identity.
 
-### **📥 Penyediaan APK**
-- Menyediakan file **APK** yang dapat diunduh untuk mempermudah pengujian aplikasi di perangkat pengguna.
-
----
-
-## **🎨 Mockup Aplikasi**
-- Membuat representasi visual desain dan antarmuka pengguna aplikasi menggunakan tools seperti **Figma** atau **Adobe XD**.
-- Mockup ini meliputi layar-layar utama:
-  - Halaman **Login** dan **Registrasi**.
-  - Halaman **Prediksi Kalori**.
-  - Halaman **Analisis Pola Tidur**.
-  - Dashboard untuk **Pelacakan Aktivitas Fisik**.
+### **📥 APK Provision**
+- Provides a downloadable **APK** file to facilitate testing on user devices.
 
 ---
 
-## **📐 Arsitektur MVVM**
-- Menggunakan arsitektur **Model-View-ViewModel (MVVM)** di seluruh proyek untuk:
-  - Memisahkan logika bisnis dari tampilan.
-  - Mempermudah pengelolaan kode dan pengujian unit.
-  - Menggunakan **LiveData** untuk mengikat data ke UI secara reaktif.
+## **🎨 App Mockup**
+- Creates a visual representation of the app’s design and user interface using tools such as **Figma** or **Adobe XD**.
+- The mockup includes key screens:
+  - **Login** and **Registration** pages.
+  - **Calorie Prediction** page.
+  - **Sleep Pattern Analysis** page.
+  - Dashboard for **Physical Activity Tracking**.
 
 ---
 
-## **🔐 Fitur Autentikasi**
-### **Login dan Registrasi**
-- Menambahkan fitur **Login** dan **Registrasi** menggunakan layanan seperti:
+## **📐 MVVM Architecture**
+- Implements the **Model-View-ViewModel (MVVM)** architecture throughout the project to:
+  - Separate business logic from the UI.
+  - Simplify code management and unit testing.
+  - Utilize **LiveData** for reactive data binding to the UI.
+
+---
+
+## **🔐 Authentication Features**
+
+### **Login and Registration**
+- Adds **Login** and **Registration** features using services like:
   - **Firebase Authentication**.
-  - Custom Authentication API yang disediakan oleh proyek.
-- Fitur ini memastikan bahwa pengguna dapat mengakses aplikasi dengan akun yang aman.
+  - Custom Authentication API provided by the project.
+- This feature ensures that users can access the application securely with their accounts.
 
-### **Autentikasi OTP**
-- Mengimplementasikan autentikasi **One-Time Password (OTP)** untuk meningkatkan keamanan login pengguna.
-- OTP dikirimkan melalui email atau SMS untuk memverifikasi identitas pengguna.
+### **OTP Authentication**
+- Implements **One-Time Password (OTP)** authentication to enhance user login security.
+- OTP is sent via email or SMS to verify the user's identity.
 
 ---
 
-## **🚀 Teknologi dan Library yang Digunakan**
+## **🚀 Technology and Libraries Used**
 
-| **Teknologi**  | **Deskripsi**                                            |
+| **Technology**  | **Description**                                         |
 |-----------------|----------------------------------------------------------|
-| Kotlin          | Bahasa pemrograman utama untuk pengembangan aplikasi.   |
-| Retrofit        | Library untuk komunikasi API.                           |
-| Glide           | Mengelola gambar di aplikasi.                          |
-| Room            | Database lokal untuk penyimpanan data pengguna.         |
-| Firebase        | Layanan cloud untuk autentikasi dan penyimpanan data pengguna.|
+| Kotlin          | Primary programming language for app development.       |
+| Retrofit        | Library for API communication.                          |
+| Glide           | Handles image processing in the app.                   |
+| Room            | Local database for storing user data.                  |
+| Firebase        | Cloud service for authentication and data storage.     |
 
 ---
 
-## **🛠️ Instalasi**
-Ikuti langkah-langkah di bawah ini untuk menjalankan proyek secara lokal:
+## **🛠️ Installation**
 
-1. Clone repository:
+Follow these steps to run the project locally:
+
+1. Clone the repository:
    ```bash
    git clone https://github.com/CC-Bangkit-C242-PS153/MD-FITCAL
-  - Jalankan proyek di emulator atau perangkat nyata
-  - Sinkronkan semua dependensi Gradle
-  - Jalankan proyek di emulator atau perangkat nyata
-
-
-  ---
-## 📂 Struktur Folder
-Struktur folder proyek ini adalah sebagai berikut:
-
-```plaintext
+      -Open the project in Android Studio:
+        -Open Android Studio.
+        -Select Open Project.
+        -Navigate to the folder where the repository was cloned and click OK.
+    
 ├── data/
 │   ├── di/                     # Dependency Injection
 │   ├── remote/
-│       ├── modelRequest/       # Model request untuk API
-│       ├── response/           # Model respons API
-│       ├── retrofit/           # Konfigurasi Retrofit
+│       ├── modelRequest/       # API request models
+│       ├── response/           # API response models
+│       ├── retrofit/           # Retrofit configurations
 │
 ├── View/
-│   ├── CustomView/             # Custom View komponen UI
-│   ├── Login/                  # Fitur Login
-│   ├── Main/                   # Halaman utama aplikasi
-│   ├── Register/               # Halaman Registrasi
-│   ├── Result/                 # Hasil analisis
+│   ├── CustomView/             # Custom UI components
+│   ├── Login/                  # Login feature
+│   ├── Main/                   # Main screen
+│   ├── Register/               # Registration screen
+│   ├── Result/                 # Analysis results
 │   ├── ui/
-│       ├── dashboard/          # Dashboard utama
-│       ├── physical/           # Pelacakan aktivitas fisik
-│       ├── profile/            # Profil pengguna
-│       ├── sleepcycle/         # Analisis pola tidur
-│   ├── BottomNavigation/       # Navigasi utama aplikasi
+│       ├── dashboard/          # Main dashboard
+│       ├── physical/           # Physical activity tracking
+│       ├── profile/            # User profile
+│       ├── sleepcycle/         # Sleep pattern analysis
+│   ├── BottomNavigation/       # Main navigation
 ├── res/                         # Resources
-│   ├── drawable/               # Gambar yang digunakan di aplikasi
-│   ├── layout/                 # Layout XML untuk UI
-│   ├── menu/                   # Menu XML
-│   ├── mipmap/                 # Ikon aplikasi
-│   ├── navigation/             # Navigasi
-│   ├── values/                 # File values (strings, colors, dimens, styles)
-│   ├── xml/                    # File XML lainnya
+│   ├── drawable/               # App images
+│   ├── layout/                 # XML layouts for UI
+│   ├── menu/                   # Menu XML files
+│   ├── mipmap/                 # App icons
+│   ├── navigation/             # Navigation files
+│   ├── values/                 # Values (strings, colors, dimensions, styles)
+│   ├── xml/                    # Other XML resources
 
 
 📦 dependencies
