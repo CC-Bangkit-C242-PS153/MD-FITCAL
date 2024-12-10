@@ -141,8 +141,8 @@ Struktur folder proyek ini adalah sebagai berikut:
 │   ├── values/                 # File values (strings, colors, dimens, styles)
 │   ├── xml/                    # File XML lainnya
 
-
-📦 dependencies
+## 📦 dependencies
+```plaintext
 dependencies {
 
     implementation(libs.androidx.core.ktx)
