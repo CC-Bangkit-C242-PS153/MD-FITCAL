@@ -107,7 +107,9 @@ Follow these steps to run the project locally:
         -Open Android Studio.
         -Select Open Project.
         -Navigate to the folder where the repository was cloned and click OK.
-    
+
+---
+## 📂 Struktur Folder
 ├── data/
 │   ├── di/                     # Dependency Injection
 │   ├── remote/
