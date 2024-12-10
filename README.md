@@ -116,33 +116,33 @@ Struktur folder proyek ini adalah sebagai berikut:
 ├── data/
 │   ├── di/                     # Dependency Injection
 │   ├── remote/
-│       ├── modelRequest/       # Model request untuk API
-│       ├── response/           # Model respons API
-│       ├── retrofit/           # Konfigurasi Retrofit
+│       ├── modelRequest/       # API request models
+│       ├── response/           # API response models
+│       ├── retrofit/           # Retrofit configurations
 │
 ├── View/
-│   ├── CustomView/             # Custom View komponen UI
-│   ├── Login/                  # Fitur Login
-│   ├── Main/                   # Halaman utama aplikasi
-│   ├── Register/               # Halaman Registrasi
-│   ├── Result/                 # Hasil analisis
+│   ├── CustomView/             # Custom UI components
+│   ├── Login/                  # Login feature
+│   ├── Main/                   # Main screen
+│   ├── Register/               # Registration screen
+│   ├── Result/                 # Analysis results
 │   ├── ui/
-│       ├── dashboard/          # Dashboard utama
-│       ├── physical/           # Pelacakan aktivitas fisik
-│       ├── profile/            # Profil pengguna
-│       ├── sleepcycle/         # Analisis pola tidur
-│   ├── BottomNavigation/       # Navigasi utama aplikasi
+│       ├── dashboard/          # Main dashboard
+│       ├── physical/           # Physical activity tracking
+│       ├── profile/            # User profile
+│       ├── sleepcycle/         # Sleep pattern analysis
+│   ├── BottomNavigation/       # Main navigation
 ├── res/                         # Resources
-│   ├── drawable/               # Gambar yang digunakan di aplikasi
-│   ├── layout/                 # Layout XML untuk UI
-│   ├── menu/                   # Menu XML
-│   ├── mipmap/                 # Ikon aplikasi
-│   ├── navigation/             # Navigasi
-│   ├── values/                 # File values (strings, colors, dimens, styles)
-│   ├── xml/                    # File XML lainnya
+│   ├── drawable/               # App images
+│   ├── layout/                 # XML layouts for UI
+│   ├── menu/                   # Menu XML files
+│   ├── mipmap/                 # App icons
+│   ├── navigation/             # Navigation files
+│   ├── values/                 # Values (strings, colors, dimensions, styles)
+│   ├── xml/                    # Other XML resources
 
-## 📦 dependencies
-```plaintext
+
+📦 dependencies
 dependencies {
 
     implementation(libs.androidx.core.ktx)
