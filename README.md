@@ -66,7 +66,6 @@ The Mobile Development team is responsible for building an application that enab
 - Implements the **Model-View-ViewModel (MVVM)** architecture throughout the project to:
   - Separate business logic from the UI.
   - Simplify code management and unit testing.
-  - Utilize **LiveData** for reactive data binding to the UI.
 
 ---
 
@@ -78,9 +77,6 @@ The Mobile Development team is responsible for building an application that enab
   - Custom Authentication API provided by the project.
 - This feature ensures that users can access the application securely with their accounts.
 
-### **OTP Authentication**
-- Implements **One-Time Password (OTP)** authentication to enhance user login security.
-- OTP is sent via email or SMS to verify the user's identity.
 
 ---
 
@@ -91,7 +87,6 @@ The Mobile Development team is responsible for building an application that enab
 | Kotlin          | Primary programming language for app development.       |
 | Retrofit        | Library for API communication.                          |
 | Glide           | Handles image processing in the app.                   |
-| Room            | Local database for storing user data.                  |
 | Firebase        | Cloud service for authentication and data storage.     |
 
 ---
@@ -143,36 +138,29 @@ The folder structure of this project is as follows:
 
 
 📦 dependencies
-dependencies {
+- `implementation(libs.androidx.core.ktx)`  // Kotlin extensions for AndroidX, providing easier-to-use APIs.
+- `implementation(libs.androidx.appcompat)`  // Support library for backward compatibility, especially for apps targeting older Android versions.
+- `implementation(libs.material)`  // Library for Material Design UI components from Google.
+- `implementation(libs.androidx.activity)`  // Provides activity-related functionality in AndroidX.
+- `implementation(libs.androidx.constraintlayout)`  // Flexible and efficient layout manager for complex UI designs.
+- `implementation(libs.androidx.lifecycle.livedata.ktx)`  // Extension functions for LiveData, part of Android Architecture Components.
+- `implementation(libs.androidx.lifecycle.viewmodel.ktx)`  // Extension functions for ViewModel, part of Android Architecture Components.
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.lifecycle.livedata.ktx)
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    implementation(libs.firebase.auth)
-    implementation(libs.firebase.firestore.ktx)
-    implementation(libs.androidx.gridlayout)
-    implementation(libs.firebase.database.ktx)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+- `implementation(libs.firebase.auth)`  // Firebase Authentication for managing user authentication.
+- `implementation(libs.firebase.firestore.ktx)`  // Firebase Firestore for real-time data storage and management.
+- `implementation(libs.firebase.database.ktx)`  // Firebase Realtime Database for direct data storage.
 
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
+- `implementation(libs.androidx.gridlayout)`  // GridLayout for supporting more complex layouts in UI.
+- `implementation(platform("com.google.firebase:firebase-bom:33.6.0"))`  // Firebase BOM to automatically manage Firebase dependency versions.
+- `implementation("com.google.firebase:firebase-analytics")`  // Firebase Analytics to track and analyze app usage.
 
-    implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
-    implementation("com.google.firebase:firebase-analytics")
+- `implementation("com.github.bumptech.glide:glide:4.16.0")`  // Glide for efficient image loading and display.
+- `implementation("com.squareup.retrofit2:retrofit:2.9.0")`  // Retrofit for making HTTP requests to APIs.
+- `implementation("com.squareup.retrofit2:converter-gson:2.9.0")`  // Gson converter for parsing JSON into Java objects.
+- `implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")`  // Interceptor for logging HTTP request and response details.
 
-    implementation("com.github.bumptech.glide:glide:4.16.0")
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
+- `implementation("id.zelory:compressor:3.0.1")`  // Library for compressing images before uploading.
 
-    implementation("id.zelory:compressor:3.0.1")
-    implementation ("com.google.android.material:material:1.9.0")
+- `implementation("com.google.android.material:material:1.9.0")`  // Material Components for modern and interactive UI design.
 
-}
 
