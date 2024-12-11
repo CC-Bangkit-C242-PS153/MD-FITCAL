@@ -104,6 +104,31 @@ Follow these steps to run the project locally:
 
 
   ---
+
+  ## **📦 dependencies**
+- `implementation(libs.androidx.core.ktx)`  // Kotlin extensions for AndroidX, providing easier-to-use APIs.
+- `implementation(libs.androidx.appcompat)`  // Support library for backward compatibility, especially for apps targeting older Android versions.
+- `implementation(libs.material)`  // Library for Material Design UI components from Google.
+- `implementation(libs.androidx.activity)`  // Provides activity-related functionality in AndroidX.
+- `implementation(libs.androidx.constraintlayout)`  // Flexible and efficient layout manager for complex UI designs.
+- `implementation(libs.androidx.lifecycle.livedata.ktx)`  // Extension functions for LiveData, part of Android Architecture Components.
+- `implementation(libs.androidx.lifecycle.viewmodel.ktx)`  // Extension functions for ViewModel, part of Android Architecture Components.
+
+- `implementation(libs.firebase.auth)`  // Firebase Authentication for managing user authentication.
+- `implementation(libs.firebase.firestore.ktx)`  // Firebase Firestore for real-time data storage and management.
+- `implementation(libs.firebase.database.ktx)`  // Firebase Realtime Database for direct data storage.
+
+- `implementation(libs.androidx.gridlayout)`  // GridLayout for supporting more complex layouts in UI.
+- `implementation(platform("com.google.firebase:firebase-bom:33.6.0"))`  // Firebase BOM to automatically manage Firebase dependency versions.
+- `implementation("com.google.firebase:firebase-analytics")`  // Firebase Analytics to track and analyze app usage.
+
+- `implementation("com.github.bumptech.glide:glide:4.16.0")`  // Glide for efficient image loading and display.
+- `implementation("com.squareup.retrofit2:retrofit:2.9.0")`  // Retrofit for making HTTP requests to APIs.
+- `implementation("com.squareup.retrofit2:converter-gson:2.9.0")`  // Gson converter for parsing JSON into Java objects.
+- `implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")`  // Interceptor for logging HTTP request and response details.
+
+- `implementation("id.zelory:compressor:3.0.1")`  // Library for compressing images before uploading.
+- `implementation("com.google.android.material:material:1.9.0")`  // Material Components for modern and interactive UI design.
 ## 📂 Struktur Folder
 The folder structure of this project is as follows:
 
@@ -136,31 +161,5 @@ The folder structure of this project is as follows:
 │   ├── values/                 # Values (strings, colors, dimensions, styles)
 │   ├── xml/                    # Other XML resources
 
-
-📦 dependencies
-- `implementation(libs.androidx.core.ktx)`  // Kotlin extensions for AndroidX, providing easier-to-use APIs.
-- `implementation(libs.androidx.appcompat)`  // Support library for backward compatibility, especially for apps targeting older Android versions.
-- `implementation(libs.material)`  // Library for Material Design UI components from Google.
-- `implementation(libs.androidx.activity)`  // Provides activity-related functionality in AndroidX.
-- `implementation(libs.androidx.constraintlayout)`  // Flexible and efficient layout manager for complex UI designs.
-- `implementation(libs.androidx.lifecycle.livedata.ktx)`  // Extension functions for LiveData, part of Android Architecture Components.
-- `implementation(libs.androidx.lifecycle.viewmodel.ktx)`  // Extension functions for ViewModel, part of Android Architecture Components.
-
-- `implementation(libs.firebase.auth)`  // Firebase Authentication for managing user authentication.
-- `implementation(libs.firebase.firestore.ktx)`  // Firebase Firestore for real-time data storage and management.
-- `implementation(libs.firebase.database.ktx)`  // Firebase Realtime Database for direct data storage.
-
-- `implementation(libs.androidx.gridlayout)`  // GridLayout for supporting more complex layouts in UI.
-- `implementation(platform("com.google.firebase:firebase-bom:33.6.0"))`  // Firebase BOM to automatically manage Firebase dependency versions.
-- `implementation("com.google.firebase:firebase-analytics")`  // Firebase Analytics to track and analyze app usage.
-
-- `implementation("com.github.bumptech.glide:glide:4.16.0")`  // Glide for efficient image loading and display.
-- `implementation("com.squareup.retrofit2:retrofit:2.9.0")`  // Retrofit for making HTTP requests to APIs.
-- `implementation("com.squareup.retrofit2:converter-gson:2.9.0")`  // Gson converter for parsing JSON into Java objects.
-- `implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")`  // Interceptor for logging HTTP request and response details.
-
-- `implementation("id.zelory:compressor:3.0.1")`  // Library for compressing images before uploading.
-
-- `implementation("com.google.android.material:material:1.9.0")`  // Material Components for modern and interactive UI design.
 
 
