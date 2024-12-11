@@ -22,6 +22,36 @@ The Mobile Development team is responsible for building an application that enab
 - **🏃 Physical Activity Tracking**: Tracks physical activity and provides suggestions based on user activity.
 
 ---
+## Prerequisites
+1. **Android**
+2. **Internet Connection**
+
+## Installation
+1. **Download the APK**  
+   [Download here](https://drive.google.com/file/d/1AsX4e1mHn2tDfK8BvkWa9s0-HF9KGfZu/view?usp=drive_link)
+2. **Install the APK**
+
+## Features
+### 1. Physical Activity Tracking
+   To use the Physical Activity Tracking feature:
+   1. Choose **Fiture Fit Guide**.
+   2. Fill in all required inputs.
+   3. Press the **Prediction** button.
+
+### 2. Calories Prediction
+   To use the Calories Prediction feature:
+   1. Choose **Fiture Nutrition**.
+   2. Take a picture.
+   3. Fill in all required inputs.
+   4. Press the **Prediction** button.
+
+### 3. Sleep Pattern Analysis
+   To use the Sleep Pattern Analysis feature:
+   1. Choose **Sleepcycle**.
+   2. Fill in all required inputs.
+   3. Press the **Prediction** button.
+
+---
 
 ## **📋 Implementation of Main Features**
 
