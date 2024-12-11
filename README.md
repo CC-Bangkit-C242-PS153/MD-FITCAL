@@ -105,7 +105,7 @@ Follow these steps to run the project locally:
 
   ---
 
-  ## **📦 dependencies**
+  ## **📦 Dependencies**
 - `implementation(libs.androidx.core.ktx)`  // Kotlin extensions for AndroidX, providing easier-to-use APIs.
 - `implementation(libs.androidx.appcompat)`  // Support library for backward compatibility, especially for apps targeting older Android versions.
 - `implementation(libs.material)`  // Library for Material Design UI components from Google.
@@ -129,6 +129,7 @@ Follow these steps to run the project locally:
 
 - `implementation("id.zelory:compressor:3.0.1")`  // Library for compressing images before uploading.
 - `implementation("com.google.android.material:material:1.9.0")`  // Material Components for modern and interactive UI design.
+---
 ## 📂 Struktur Folder
 The folder structure of this project is as follows:
 
