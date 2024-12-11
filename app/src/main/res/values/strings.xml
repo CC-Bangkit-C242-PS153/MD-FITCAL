@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CapstoneProject</string>
+    <string name="app_name">FITCAL</string>
     <string name="password">Password</string>
     <string name="email">Email</string>
     <string name="login">LOGIN</string>
